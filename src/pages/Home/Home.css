@@ -1,0 +1,88 @@
+.Home {
+  text-align: center;
+  color: #2e353b;
+}
+
+.introduction {
+  padding: 0 80px;
+  padding-bottom: 80px;
+}
+
+.welcome-text {
+  font-size: 30px;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 76px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-top: -40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.button {
+  cursor: pointer;
+  margin: 0 20px;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.sponsor-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(117, 126, 143);
+  margin-top: 100px;
+}
+
+.examples {
+  background-color: #e2eaee;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: -60px;
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+
+.header {
+  font-size: 40px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 0 30px;
+  padding: 20px;
+}
+
+.conclusion {
+  background-color: #262f3a;
+  color: rgb(240, 243, 247);
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: -60px;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.conclusion-link {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}

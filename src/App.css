@@ -11,14 +11,6 @@ body {
   box-shadow: 0 2px 12px rgba(36, 50, 66, 0.1);
 }
 
-.mobile-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 18px 20px;
-  overflow: hidden;
-  background-color: white;
-}
-
 .mobile-button {
   display: none;
   float: right;
@@ -102,4 +94,10 @@ footer {
 .footer-text {
   color: rgb(240, 243, 247);
   text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .nav {
+    padding: 18px 10px;
+  }
 }

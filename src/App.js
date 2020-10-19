@@ -65,9 +65,10 @@ export default function App() {
           
           <Drawer open={menu} anchor="right" onClose={() => setMenu(false)}>
             <div style={{width: 200, display: "flex", flexDirection: "column", padding: "40px 30px"}}>
-              <button style={{marginTop: -20, marginLeft: -5, marginBottom: 20}} className="mobile-button" onClick={() => setMenu(false)}>
+              <button style={{marginTop: -20, marginLeft: -7, marginBottom: 20}} className="mobile-button" onClick={() => setMenu(false)}>
                 <img alt="" src={Cross} height={20} />
               </button>
+              <Link onClick={() => setMenu(false)} style={{fontSize: 20, marginBottom: 10}} to="/" className="links">Home</Link>
               <Link onClick={() => setMenu(false)} style={{fontSize: 20, marginBottom: 10}} to="/documentation" className="links">Documentation</Link>
               <Link onClick={() => setMenu(false)} style={{fontSize: 20}} to="/demo" className="links">Demo</Link>
               

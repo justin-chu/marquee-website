@@ -23,6 +23,50 @@
   margin-top: -40px;
 }
 
+@media only screen and (max-width: 900px) {
+  .introduction {
+    padding: 0 20px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-top: -30px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .introduction {
+    padding: 0 10px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+}
+
 .button-container {
   display: flex;
   justify-content: center;

@@ -23,48 +23,8 @@
   margin-top: -40px;
 }
 
-@media only screen and (max-width: 900px) {
-  .introduction {
-    padding: 0 20px;
-    padding-bottom: 80px;
-  }
-
-  .title {
-    font-size: 56px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    margin-top: -30px;
-  }
-}
-
-@media only screen and (max-width: 590px) {
-  .title {
-    font-size: 42px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    margin-top: -20px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .introduction {
-    padding: 0 10px;
-    padding-bottom: 80px;
-  }
-
-  .title {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    margin-top: -10px;
-  }
+.website-image {
+  height: 40px;
 }
 
 .button-container {
@@ -90,6 +50,62 @@
   font-weight: bold;
   color: rgb(117, 126, 143);
   margin-top: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+  .introduction {
+    padding: 0 20px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    margin-top: -30px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -20px;
+  }
+
+  .sponsor-text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .introduction {
+    padding: 0 10px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  .website-image {
+    height: 28px;
+  }
+
+  .button {
+    margin: 0 10px;
+  }
 }
 
 .examples {
@@ -126,8 +142,19 @@
   padding-bottom: 60px;
 }
 
+.conclusion-text {
+  font-size: 18px;
+}
+
 .conclusion-link {
   cursor: pointer;
   color: white;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 590px) {
+  .conclusion {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

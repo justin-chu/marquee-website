@@ -12,7 +12,7 @@ function Home () {
   return (
     <div className="Home">
       <div className="introduction">
-        <Marquee gradientColor={[248, 251, 253]} style={{marginTop: 100}}>
+        <Marquee gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 100}}>
           {WelcomeText.map((item, index) => {
             if(index % 2 === 0)
               return <h1 className="welcome-text" style={{color: "#444d54"}} key={index}>{item.text}</h1>;
@@ -23,12 +23,18 @@ function Home () {
         <h1 className="title">React <span style={{fontStyle: "italic"}}>FAST</span> Marquee</h1>
         <p className="subtitle">A lightweight React component that utilizes the power of CSS animations to create silky smooth marquees.</p>
         <div className="button-container">
-          <a className="button" href="https://github.com/justin-chu/react-fast-marquee" target="_blank" rel="noopener noreferrer"><img height={40} src={GitHub} alt="GitHub" /></a>
-          <a className="button" href="http://npmjs.com/package/react-fast-marquee" target="_blank" rel="noopener noreferrer"><img height={40} src={npm} alt="npm" /></a>
-          <a className="button" href="https://yarnpkg.com/package/react-fast-marquee" target="_blank" rel="noopener noreferrer"><img height={40} src={Yarn} alt="Yarn" /></a>
+          <a className="button" href="https://github.com/justin-chu/react-fast-marquee" target="_blank" rel="noopener noreferrer">
+            <img className="website-image" src={GitHub} alt="GitHub" />
+          </a>
+          <a className="button" href="http://npmjs.com/package/react-fast-marquee" target="_blank" rel="noopener noreferrer">
+            <img className="website-image" src={npm} alt="npm" />
+          </a>
+          <a className="button" href="https://yarnpkg.com/package/react-fast-marquee" target="_blank" rel="noopener noreferrer">
+            <img className="website-image" src={Yarn} alt="Yarn" />
+          </a>
         </div>
         <p className="sponsor-text">Sponsored by (not actually):</p>
-        <Marquee gradientColor={[248, 251, 253]} style={{marginTop: 20}}>
+        <Marquee gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 20}}>
           {SliderItems.map((item, index) => {
             return (
             <img src={require(`../../assets/images/${item.src}`)}
@@ -87,13 +93,13 @@ function Home () {
         <Marquee speed={70} gradient={false} pauseOnClick={true} style={{marginTop: 80}}>
             <h1 style={{width: 700, fontSize: 30, margin: 0}}>Hold your click on this one to pause it!</h1>
         </Marquee>
-        <Marquee speed={70} gradientColor={[255, 0, 0]} gradientWidth={400} style={{marginTop: 80}}>
+        <Marquee speed={70} gradientColor={[255, 0, 0]} gradientWidth="40%" style={{marginTop: 80}}>
             <h1 style={{width: 700, fontSize: 30, margin: 0}}>A wider, red gradient</h1>
         </Marquee>
       </div>
       <div className="conclusion">
         <h1 className="header">Interested?</h1>
-        <p style={{fontSize: 18}}>See the{" "}
+        <p className="conclusion-text">See the{" "}
           <Link to="/documentation" className="conclusion-link">docs</Link>{" "}
           for more information or play around with it yourself{" "}
           <Link to="/demo" className="conclusion-link">here</Link>!

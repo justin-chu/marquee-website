@@ -38,6 +38,7 @@
 @media only screen and (max-width: 800px) {
   .content {
     padding: 30px;
+    padding-top: 60px;
     width: 500px;
   }
 }
@@ -45,6 +46,7 @@
 @media only screen and (max-width: 575px) {
   .content {
     padding: 20px;
+    padding-top: 40px;
     width: 400px;
   }
 }
@@ -52,6 +54,7 @@
 @media only screen and (max-width: 450px) {
   .content {
     padding: 10px;
+    padding-top: 30px;
     width: 300px;
   }
 }

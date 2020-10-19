@@ -72,8 +72,9 @@ function Demo () {
           }
         </Marquee>
       </div>
+
       <div className="playground">
-        <div>
+        <div className="playground-buttons">
           <button style={{width: 80}} className="button" onClick={() => setPlay(!play)}>
             <p>{play ? "Pause" : "Play"}</p>
           </button>
@@ -91,7 +92,7 @@ function Demo () {
           </button>
         </div>
 
-        <div style={{display: "flex", justifyContent: "space-between", width: 720}}>
+        <div className="playground-input">
           <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <h3 style={{marginTop: 30, marginBottom: -20}}>Speed (px/s):</h3>
               <input style={{marginTop: 30}} value={speed} onChange={(e) => setSpeed(e.target.value)} className="input" />

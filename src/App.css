@@ -1,6 +1,7 @@
 body {
   background-color: #f8fbfd;
 }
+
 .nav {
   list-style-type: none;
   margin: 0;
@@ -10,15 +11,52 @@ body {
   box-shadow: 0 2px 12px rgba(36, 50, 66, 0.1);
 }
 
+.mobile-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 18px 20px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.mobile-button {
+  display: none;
+  float: right;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 li {
   float: left;
   display: block;
   margin: 0 15px;
 }
 
+.drawer {
+  width: 300px;
+  margin-left: -200px;
+}
+
+@media only screen and (max-width: 740px) {
+  li:not(.logo) {
+    display: none;
+  }
+
+  .mobile-button {
+    display: flex;
+  }
+}
+
 .logo {
   font-size: 20px;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 310px) {
+  .logo {
+    font-size: 16px;
+  }
 }
 
 .links {
@@ -36,7 +74,7 @@ li {
 
 .website-links {
   cursor: pointer;
-  color: black;
+  color: #2e353b;
   text-decoration: none;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;

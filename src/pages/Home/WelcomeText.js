@@ -30,7 +30,10 @@ export const WelcomeText = [
     text: "Hoş geldin"
   },
   {
-    text: "באַגריסן"
+    text: "Bine ati venit"
+  },
+  {
+    text: "ברוך הבא"
   },
   {
     text: "Witaj"
@@ -46,5 +49,20 @@ export const WelcomeText = [
   },
   {
     text: "ਸਵਾਗਤ ਹੈ"
+  },
+  {
+    text: "Kaabo"
+  },
+  {
+    text: "Welkom"
+  },
+  {
+    text: "Chào mừng"
+  },
+  {
+    text: "Maligayang pagdating"
+  },
+  {
+    text: "καλως ΗΡΘΑΤΕ"
   },
 ]

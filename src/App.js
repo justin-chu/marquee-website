@@ -27,7 +27,7 @@ export default function App() {
       <ScrollToTop />
       <div>
         <nav style={{position: "fixed", top: 0, left: 0, right: 0, zIndex: 100}}>
-          <ul>
+          <ul className="nav">
             <li className="logo">
               <Link to="/" className="links">React <span style={{fontStyle: "italic"}}>FAST</span> Marquee</Link>
             </li>

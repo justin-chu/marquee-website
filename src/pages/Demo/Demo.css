@@ -1,0 +1,56 @@
+.marquee-button {
+  cursor: pointer;
+  margin: 0 10px;
+  color: black;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 10px;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.marquee-button:hover {
+  color: #89939c;
+}
+
+.marquee-button-selected {
+  cursor: pointer;
+  margin: 0 10px;
+  color: black;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+
+.playground {
+  background-color: #e2eaee;
+  margin-bottom: -60px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  outline: none;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.input {
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 40px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+}

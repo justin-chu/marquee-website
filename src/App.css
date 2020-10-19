@@ -1,7 +1,7 @@
 body {
   background-color: #f8fbfd;
 }
-ul {
+.nav {
   list-style-type: none;
   margin: 0;
   padding: 18px 20px;
@@ -16,9 +16,15 @@ li {
   margin: 0 15px;
 }
 
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .links {
-  color: black;
+  color: #2e353b;
   text-decoration: none;
+  font-style: normal;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -44,11 +50,6 @@ li {
 
 li:not(.logo) {
   margin-top: 3.5px;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 footer {

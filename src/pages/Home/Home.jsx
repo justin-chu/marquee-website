@@ -24,13 +24,13 @@ function Home () {
         <p className="subtitle">A lightweight React component that utilizes the power of CSS animations to create silky smooth marquees.</p>
         <div className="button-container">
           <a className="button" href="https://github.com/justin-chu/react-fast-marquee" target="_blank" rel="noopener noreferrer">
-            <img className="website-image" src={GitHub} alt="GitHub" />
+            <img height={40} src={GitHub} alt="GitHub" />
           </a>
           <a className="button" href="http://npmjs.com/package/react-fast-marquee" target="_blank" rel="noopener noreferrer">
-            <img className="website-image" src={npm} alt="npm" />
+            <img height={40} src={npm} alt="npm" />
           </a>
           <a className="button" href="https://yarnpkg.com/package/react-fast-marquee" target="_blank" rel="noopener noreferrer">
-            <img className="website-image" src={Yarn} alt="Yarn" />
+            <img height={40} src={Yarn} alt="Yarn" />
           </a>
         </div>
         <p className="sponsor-text">Sponsored by (not actually):</p>
@@ -38,7 +38,8 @@ function Home () {
           {SliderItems.map((item, index) => {
             return (
             <img src={require(`../../assets/images/${item.src}`)}
-              style={{height: 50, margin: "0 40px"}}
+              height={50}
+              style={{margin: "0 40px"}}
               alt={item.alt} key={index} />
             );
           })}
@@ -49,28 +50,28 @@ function Home () {
         <h1 className="header">Examples</h1>
         <Marquee gradient={false} style={{marginTop: 50}}>
           <div className="card">
-            <img alt="" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+            <img alt="" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" width={100} height={100} style={{ borderRadius: 15}}/>
             <p style={{marginTop: 5, marginBottom: 0}}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
               labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
           </div>
           <div className="card">
-            <img alt="" src="https://www.pngarts.com/files/5/Avatar-Face-Transparent.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+            <img alt="" src="https://www.pngarts.com/files/5/Avatar-Face-Transparent.png" width={100} height={100} style={{ borderRadius: 15}}/>
             <p style={{marginTop: 5, marginBottom: 0}}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
               labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
           </div>
           <div className="card">
-            <img alt="" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+            <img alt="" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" width={100} height={100} style={{ borderRadius: 15}}/>
             <p style={{marginTop: 5, marginBottom: 0}}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
               labore et dolore magna aliqua. Ut enim ad minim veniam.
             </p>
           </div>
           <div className="card">
-            <img alt="" src="https://www.shareicon.net/data/512x512/2016/09/15/829471_user_512x512.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+            <img alt="" src="https://www.shareicon.net/data/512x512/2016/09/15/829471_user_512x512.png" width={100} height={100} style={{ borderRadius: 15}}/>
             <p style={{marginTop: 5, marginBottom: 0}}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
               labore et dolore magna aliqua. Ut enim ad minim veniam.
@@ -99,10 +100,10 @@ function Home () {
       </div>
       <div className="conclusion">
         <h1 className="header">Interested?</h1>
-        <p className="conclusion-text">See the{" "}
+        <p className="conclusion-text">View the{" "}
           <Link to="/documentation" className="conclusion-link">docs</Link>{" "}
-          for more information or play around with it yourself{" "}
-          <Link to="/demo" className="conclusion-link">here</Link>!
+          for more information or play around with it in the{" "}
+          <Link to="/demo" className="conclusion-link">demo page</Link>!
         </p>
       </div>
     </div>

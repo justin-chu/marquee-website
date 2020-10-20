@@ -29,7 +29,8 @@ function Demo () {
           {index === 0 && SliderItems.map((item, index) => {
             return (
             <img src={require(`../../assets/images/${item.src}`)}
-              style={{height: 50, margin: "0 40px", marginTop: 80}}
+              height={50}
+              style={{margin: "0 40px", marginTop: 80}}
               alt={item.alt} key={index} />
             );
           })}
@@ -39,36 +40,37 @@ function Demo () {
             else
               return <h1 className="welcome-text" style={{color: "#89939c", marginTop: 80}} key={index}>{item.text}</h1>;
           })}
-          {index === 2 && <>
-            <div className="card">
-              <img alt="" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+          {index === 2 && 
+          <>
+            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
+              <img alt="" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" width={100} height={100} style={{ borderRadius: 15}}/>
               <p style={{marginTop: 5, marginBottom: 0}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                 labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
-            <div className="card">
-              <img alt="" src="https://www.pngarts.com/files/5/Avatar-Face-Transparent.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
+              <img alt="" src="https://www.pngarts.com/files/5/Avatar-Face-Transparent.png" width={100} height={100} style={{ borderRadius: 15}}/>
               <p style={{marginTop: 5, marginBottom: 0}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                 labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
-            <div className="card">
-              <img alt="" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
+              <img alt="" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" width={100} height={100} style={{ borderRadius: 15}}/>
               <p style={{marginTop: 5, marginBottom: 0}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                 labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
-            <div className="card">
-              <img alt="" src="https://www.shareicon.net/data/512x512/2016/09/15/829471_user_512x512.png" style={{ width: 100, height: 100, borderRadius: 15}}/>
+            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
+              <img alt="" src="https://www.shareicon.net/data/512x512/2016/09/15/829471_user_512x512.png" width={100} height={100} style={{ borderRadius: 15}}/>
               <p style={{marginTop: 5, marginBottom: 0}}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                 labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
             </div>
-            </>
+          </>
           }
         </Marquee>
       </div>

@@ -148,7 +148,7 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 590px) {
+@media only screen and (max-width: 680px) {
   .conclusion {
     padding-left: 20px;
     padding-right: 20px;

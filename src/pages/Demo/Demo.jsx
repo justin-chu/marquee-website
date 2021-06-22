@@ -12,6 +12,7 @@ function Demo () {
   const [direction, setDirection] = React.useState("left")
   const [speed, setSpeed] = React.useState(30)
   const [delay, setDelay] = React.useState(0)
+  const [loop, setLoop] = React.useState(0)
   const [gradient, setGradient] = React.useState(true)
   const [gradientColor, setGradientColor] = React.useState([248, 251, 253])
   const [gradientWidth, setGradientWidth] = React.useState(200)
@@ -25,7 +26,7 @@ function Demo () {
       </div>
       <div style={{display: "flex", alignItems: "center", height: 300}}>
         <Marquee play={play} pauseOnHover={pauseOnHover} pauseOnClick={pauseOnClick} speed={speed}
-          direction={direction} delay={delay} gradient={gradient} gradientColor={gradientColor} gradientWidth={`${gradientWidth}px`} >
+          direction={direction} delay={delay} loop={loop} gradient={gradient} gradientColor={gradientColor} gradientWidth={`${gradientWidth}px`} >
           {index === 0 && SliderItems.map((item, index) => {
             return (
             <img src={require(`../../assets/images/${item.src}`)}
@@ -102,6 +103,10 @@ function Demo () {
           <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <h3 style={{marginTop: 30, marginBottom: -20}}>Delay (s):</h3>
               <input style={{marginTop: 30}} value={delay} onChange={(e) => setDelay(e.target.value)} className="input" />
+          </div>
+          <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+            <h3 style={{marginTop: 30, marginBottom: -20}}>Loop (#):</h3>
+              <input style={{marginTop: 30}} value={delay} onChange={(e) => setLoop(e.target.value)} className="input" />
           </div>
           <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <h3 style={{marginTop: 30, marginBottom: -20}}>Gradient color (rgb):</h3>

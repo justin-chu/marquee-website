@@ -64,6 +64,11 @@ function Documentation () {
             </a>
           </li>
           <li style={{marginBottom: 10, marginLeft: 36}}>
+            <a href="#loop" style={{fontWeight: "normal"}} className="menu-link">
+              loop
+            </a>
+          </li>
+          <li style={{marginBottom: 10, marginLeft: 36}}>
             <a href="#gradient" style={{fontWeight: "normal"}} className="menu-link">
               gradient
             </a>
@@ -263,6 +268,24 @@ export default App;`}
           </SyntaxHighlighter>
         </a>
         <p>The duration to delay the animation after render, in seconds.</p>
+        <table className="props-data">
+          <tr style={{fontWeight: "bold"}}>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Required</th>
+          </tr>
+          <tr>
+            <td>number</td>
+            <td>0</td>
+            <td>No</td>
+          </tr>
+        </table>
+        <a className="hash-link" id="loop" href="/documentation/#loop">
+          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
+            loop
+          </SyntaxHighlighter>
+        </a>
+        <p>The number of times the marquee should loop, 0 is equivalent to infinite.</p>
         <table className="props-data">
           <tr style={{fontWeight: "bold"}}>
             <th>Type</th>

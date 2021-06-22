@@ -103,3 +103,7 @@ th {
 :target::before:focus {
   outline: none;
 }
+
+:target::after:focus {
+  outline: none;
+}

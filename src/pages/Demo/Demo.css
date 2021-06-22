@@ -45,7 +45,7 @@
 
 .playground-input {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   grid-column-gap: 50px;
 }
 
@@ -91,6 +91,10 @@
 
   .playground-buttons {
     grid-template-columns: auto;
+  }
+
+  .button {
+    margin: 0 auto;
   }
 
   .playground-input {

@@ -106,7 +106,7 @@ function Demo () {
           </div>
           <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <h3 style={{marginTop: 30, marginBottom: -20}}>Loop (#):</h3>
-              <input style={{marginTop: 30}} value={delay} onChange={(e) => setLoop(e.target.value)} className="input" />
+              <input style={{marginTop: 30}} value={loop} onChange={(e) => setLoop(e.target.value)} className="input" />
           </div>
           <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
             <h3 style={{marginTop: 30, marginBottom: -20}}>Gradient color (rgb):</h3>

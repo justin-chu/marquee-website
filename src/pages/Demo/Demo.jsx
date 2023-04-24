@@ -25,7 +25,7 @@ function Demo () {
         <button className={index === 1 ? "marquee-button-selected" : "marquee-button"} onClick={() => setIndex(1)}><h1>Text</h1></button>
         <button className={index === 2 ? "marquee-button-selected" : "marquee-button"} onClick={() => setIndex(2)}><h1>Cards</h1></button>
       </div>
-      <div className="marquee-container">
+      <div className="demo-marquee">
         <Marquee autoFill={autofill} play={play} pauseOnHover={pauseOnHover} pauseOnClick={pauseOnClick} speed={speed}
           direction={direction} delay={delay} loop={loop} gradient={gradient} gradientColor={gradientColor} gradientWidth={`${gradientWidth}px`} >
           {index === 0 && SliderItems.map((item, index) => {

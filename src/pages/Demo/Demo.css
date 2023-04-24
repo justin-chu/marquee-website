@@ -1,7 +1,6 @@
-.marquee-container {
+.demo-marquee {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   min-height: 300px;
   height: 100vh;
   max-height: calc(100vh - 548px);

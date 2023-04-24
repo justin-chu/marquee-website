@@ -12,7 +12,7 @@ function Home () {
   return (
     <div className="Home">
       <div className="introduction">
-        <Marquee speed={40} gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 100}}>
+        <Marquee gradient speed={40} gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 100}}>
           {WelcomeText.map((item, index) => {
             if(index % 2 === 0)
               return <h1 className="welcome-text" style={{color: "#444d54"}} key={index}>{item.text}</h1>;
@@ -34,7 +34,7 @@ function Home () {
           </a>
         </div>
         <p className="sponsor-text">Sponsored by (not actually):</p>
-        <Marquee speed={40} gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 20}}>
+        <Marquee gradient speed={40} gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 20}}>
           {SliderItems.map((item, index) => {
             return (
             <img src={require(`../../assets/images/${item.src}`)}

@@ -9,6 +9,7 @@ function Demo () {
   const [play, setPlay] = React.useState(true)
   const [pauseOnHover, setPauseOnHover] = React.useState(false)
   const [pauseOnClick, setPauseOnClick] = React.useState(false)
+  const [autofill, setAutofill] = React.useState(true)
   const [direction, setDirection] = React.useState("left")
   const [speed, setSpeed] = React.useState(30)
   const [delay, setDelay] = React.useState(0)
@@ -24,8 +25,8 @@ function Demo () {
         <button className={index === 1 ? "marquee-button-selected" : "marquee-button"} onClick={() => setIndex(1)}><h1>Text</h1></button>
         <button className={index === 2 ? "marquee-button-selected" : "marquee-button"} onClick={() => setIndex(2)}><h1>Cards</h1></button>
       </div>
-      <div style={{display: "flex", alignItems: "center", height: 300}}>
-        <Marquee play={play} pauseOnHover={pauseOnHover} pauseOnClick={pauseOnClick} speed={speed}
+      <div className="marquee-container">
+        <Marquee autoFill={autofill} play={play} pauseOnHover={pauseOnHover} pauseOnClick={pauseOnClick} speed={speed}
           direction={direction} delay={delay} loop={loop} gradient={gradient} gradientColor={gradientColor} gradientWidth={`${gradientWidth}px`} >
           {index === 0 && SliderItems.map((item, index) => {
             return (
@@ -42,42 +43,26 @@ function Demo () {
               return <h1 className="welcome-text" style={{color: "#89939c", marginTop: 80}} key={index}>{item.text}</h1>;
           })}
           {index === 2 && 
-          <>
-            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
-              <img alt="" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" width={100} height={100} style={{ borderRadius: 15}}/>
-              <p style={{marginTop: 5, marginBottom: 0}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-            </div>
-            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
-              <img alt="" src="https://www.pngarts.com/files/5/Avatar-Face-Transparent.png" width={100} height={100} style={{ borderRadius: 15}}/>
-              <p style={{marginTop: 5, marginBottom: 0}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-            </div>
-            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
-              <img alt="" src="https://cdn.iconscout.com/icon/free/png-512/avatar-372-456324.png" width={100} height={100} style={{ borderRadius: 15}}/>
-              <p style={{marginTop: 5, marginBottom: 0}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-            </div>
-            <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
-              <img alt="" src="https://www.shareicon.net/data/512x512/2016/09/15/829471_user_512x512.png" width={100} height={100} style={{ borderRadius: 15}}/>
-              <p style={{marginTop: 5, marginBottom: 0}}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-            </div>
-          </>
+            <>
+              <div className="card" style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
+                <img alt="" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" width={100} height={100} style={{ borderRadius: 15}}/>
+                <p style={{marginTop: 5, marginBottom: 0}}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                  labore et dolore magna aliqua. Ut enim ad minim veniam.
+                </p>
+              </div>
+            </>
           }
         </Marquee>
       </div>
 
       <div className="playground">
         <div className="playground-buttons">
+        {index === 2 &&
+          <button style={{width: 160}} className="button" onClick={() => setAutofill(!autofill)}>
+            <p>{autofill ? "Remove autofill" : "Autofill"}</p>
+          </button>
+        } 
           <button style={{width: 80}} className="button" onClick={() => setPlay(!play)}>
             <p>{play ? "Pause" : "Play"}</p>
           </button>

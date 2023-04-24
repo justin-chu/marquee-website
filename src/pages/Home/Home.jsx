@@ -12,7 +12,7 @@ function Home () {
   return (
     <div className="Home">
       <div className="introduction">
-        <Marquee gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 100}}>
+        <Marquee speed={40} gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 100}}>
           {WelcomeText.map((item, index) => {
             if(index % 2 === 0)
               return <h1 className="welcome-text" style={{color: "#444d54"}} key={index}>{item.text}</h1>;
@@ -34,7 +34,7 @@ function Home () {
           </a>
         </div>
         <p className="sponsor-text">Sponsored by (not actually):</p>
-        <Marquee gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 20}}>
+        <Marquee speed={40} gradientColor={[248, 251, 253]} gradientWidth="10%" style={{marginTop: 20}}>
           {SliderItems.map((item, index) => {
             return (
             <img src={require(`../../assets/images/${item.src}`)}
@@ -48,7 +48,7 @@ function Home () {
 
       <div className="examples">
         <h1 className="header">Examples</h1>
-        <Marquee gradient={false} style={{marginTop: 50}}>
+        <Marquee speed={20} gradient={false} style={{marginTop: 50}}>
           <div className="card">
             <img alt="" src="https://cdn.iconscout.com/icon/free/png-256/avatar-369-456321.png" width={100} height={100} style={{ borderRadius: 15}}/>
             <p style={{marginTop: 5, marginBottom: 0}}>
@@ -94,7 +94,7 @@ function Home () {
         <Marquee speed={70} gradient={false} pauseOnClick={true} style={{marginTop: 80}}>
             <h1 style={{width: 700, fontSize: 30, margin: 0}}>Hold your click on this one to pause it!</h1>
         </Marquee>
-        <Marquee speed={70} gradientColor={[255, 0, 0]} gradientWidth="40%" style={{marginTop: 80}}>
+        <Marquee speed={70} gradient gradientColor={[255, 0, 0]} gradientWidth="40%" style={{marginTop: 80}}>
             <h1 style={{width: 700, fontSize: 30, margin: 0}}>A wider, red gradient</h1>
         </Marquee>
       </div>

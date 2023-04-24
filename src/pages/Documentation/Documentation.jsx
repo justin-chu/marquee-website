@@ -3,6 +3,136 @@ import "./Documentation.css";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { vs } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+const marqueeProps = {
+  style: {
+    description: "The inline style for the container div.",
+    type: "CSSProperties",
+    defaultValue: "{}",
+    required: false
+  },
+  className: {
+    description: "The name of the css class to style the container div.",
+    type: "string",
+    defaultValue: '""',
+    required: false
+  },
+  autofill: {
+    description: "Whether to automatically fill blank space in the marquee with copies of the children or not.",
+    type: "boolean",
+    defaultValue: "true",
+    required: false
+  },
+  play: {
+    description: "Whether to play or pause the marquee.",
+    type: "boolean",
+    defaultValue: "true",
+    required: false
+  },
+  pauseOnHover: {
+    description: "Whether to pause the marquee when hovered.",
+    type: "boolean",
+    defaultValue: "false",
+    required: false
+  },
+  pauseOnClick: {
+    description: "Whether to pause the marquee when clicked.",
+    type: "boolean",
+    defaultValue: "false",
+    required: false
+  },
+  direction: {
+    description: "The direction the marquee is sliding. Warning: Vertical marquees are currently experimental and may be buggy. Please swap the values of the marquee's height and width when setting them ",
+    type: '"left" | "right" | "up" | "down"',
+    defaultValue: "left",
+    required: false
+  },
+  speed: {
+    description: "The speed calculated as pixels/second.",
+    type: "number",
+    defaultValue: "100",
+    required: false
+  },
+  delay: {
+    description: "The duration to delay the animation after render, in seconds.",
+    type: "number",
+    defaultValue: "0",
+    required: false
+  },
+  loop: {
+    description: "The number of times the marquee should loop, 0 is equivalent to infinite.",
+    type: "number",
+    defaultValue: "0",
+    required: false
+  },
+  gradient: {
+    description: "Whether to show the gradient or not.",
+    type: "boolean",
+    defaultValue: "false",
+    required: false
+  },
+  gradientColor: {
+    description: "The rgb color of the gradient as an array of length 3.",
+    type: "Array<number> of length 3",
+    defaultValue: "[255, 255, 255]",
+    required: false
+  },
+  gradientWidth: {
+    description: "The width of the gradient on either side.",
+    type: "number",
+    defaultValue: "200",
+    required: false
+  },
+  onFinish: {
+    description: "A callback for when the marquee finishes scrolling and stops. Only calls if loop is non-zero.",
+    type: "function",
+    defaultValue: "{() => void}",
+    required: false
+  },
+  onCycleComplete: {
+    description: "A callback for when the marquee finishes a loop. Does not call if maximum loops are reached (use onFinish instead).",
+    type: "{() => void}",
+    defaultValue: "null",
+    required: false
+  },
+  children: {
+    description: "The children rendered inside the marquee.",
+    type: "ReactNode",
+    defaultValue: "null",
+    required: true
+  }
+}
+
+const PropListItem = (name) => (
+  <li style={{marginBottom: 10, marginLeft: 36}}>
+    <a href={`#${name}`} style={{fontWeight: "normal"}} className="menu-link">
+      {name}
+    </a>
+  </li>
+)
+
+const PropDetails = ({name, description, type, defaultValue, required}) => (
+  <>
+    <a className="hash-link" id={name} href={`/documentation/#${name}`}>
+      <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
+        {name}
+      </SyntaxHighlighter>
+    </a>
+    <p>{description}</p>
+    <table className="props-data">
+      <tr style={{fontWeight: "bold"}}>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Required</th>
+      </tr>
+      <tr>
+        <td>{type}</td>
+        <td>{defaultValue}</td>
+        <td>{required ? "Yes" : "No"}</td>
+      </tr>
+    </table>
+  </>
+)
+
 function Documentation () {
   return (
     <div style={{display: "flex", marginTop: 30, marginBottom: -60, justifyContent: "center"}}>
@@ -23,71 +153,7 @@ function Documentation () {
               Props
             </a>
           </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#style" style={{fontWeight: "normal"}} className="menu-link">
-              style
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#className" style={{fontWeight: "normal"}} className="menu-link">
-              className
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#play" style={{fontWeight: "normal"}} className="menu-link">
-              play
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#pauseOnHover" style={{fontWeight: "normal"}} className="menu-link">
-              pauseOnHover
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#pauseOnClick" style={{fontWeight: "normal"}} className="menu-link">
-              pauseOnClick
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#direction" style={{fontWeight: "normal"}} className="menu-link">
-              direction
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#speed" style={{fontWeight: "normal"}} className="menu-link">
-              speed
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#delay" style={{fontWeight: "normal"}} className="menu-link">
-              delay
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#loop" style={{fontWeight: "normal"}} className="menu-link">
-              loop
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#gradient" style={{fontWeight: "normal"}} className="menu-link">
-              gradient
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#gradientColor" style={{fontWeight: "normal"}} className="menu-link">
-              gradientColor
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#gradientWidth" style={{fontWeight: "normal"}} className="menu-link">
-              gradientWidth
-            </a>
-          </li>
-          <li style={{marginBottom: 10, marginLeft: 36}}>
-            <a href="#children" style={{fontWeight: "normal"}} className="menu-link">
-              children
-            </a>
-          </li>
+          {Object.keys(marqueeProps).map(PropListItem)}
         </ul>
       </div>
 
@@ -136,240 +202,9 @@ export default App;`}
         <a className="hash-link" id="props" href="/documentation/#props">
           <h1>Props</h1>
         </a>
-        <a className="hash-link" id="style" href="/documentation/#style">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            style
-          </SyntaxHighlighter>
-        </a>
-        <p>The inline style for the container div.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>Object</td>
-            <td>{"{}"}</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="className" href="/documentation/#className">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            className
-          </SyntaxHighlighter>
-        </a>
-        <p>The name of the css class to style the container div.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>string</td>
-            <td>{'""'}</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="play" href="/documentation/#play">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            play
-          </SyntaxHighlighter>
-        </a>
-        <p>Whether to play or pause the marquee.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>boolean</td>
-            <td>true</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="pauseOnHover" href="/documentation/#pauseOnHover">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            pauseOnHover
-          </SyntaxHighlighter>
-        </a>
-        <p>Whether to pause the marquee when hovered.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>boolean</td>
-            <td>false</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="pauseOnClick" href="/documentation/#pauseOnClick">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            pauseOnClick
-          </SyntaxHighlighter>
-        </a>
-        <p>Whether to pause the marquee when clicked.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>boolean</td>
-            <td>false</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="direction" href="/documentation/#direction">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            direction
-          </SyntaxHighlighter>
-        </a>
-        <p>The direction the marquee is sliding.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>"left" or "right"</td>
-            <td>"left"</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="speed" href="/documentation/#speed">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            speed
-          </SyntaxHighlighter>
-        </a>
-        <p>The speed calculated as pixels/second.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>number</td>
-            <td>20</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="delay" href="/documentation/#delay">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            delay
-          </SyntaxHighlighter>
-        </a>
-        <p>The duration to delay the animation after render, in seconds.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>number</td>
-            <td>0</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="loop" href="/documentation/#loop">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            loop
-          </SyntaxHighlighter>
-        </a>
-        <p>The number of times the marquee should loop, 0 is equivalent to infinite.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>number</td>
-            <td>0</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="gradient" href="/documentation/#gradient">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            gradient
-          </SyntaxHighlighter>
-        </a>
-        <p>Whether to show the gradient or not.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>boolean</td>
-            <td>true</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="gradientColor" href="/documentation/#gradientColor">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            gradientColor
-          </SyntaxHighlighter>
-        </a>
-        <p>The rgb color of the gradient as an array of length 3.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>Array{`<number>`} of length 3</td>
-            <td>[255, 255, 255]</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="gradientWidth" href="/documentation/#gradientWidth">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            gradientWidth
-          </SyntaxHighlighter>
-        </a>
-        <p>The width of the gradient on either side.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>number or string</td>
-            <td>200</td>
-            <td>No</td>
-          </tr>
-        </table>
-        <a className="hash-link" id="children" href="/documentation/#children">
-          <SyntaxHighlighter className="props-name" language="javascript" style={vs}>
-            children
-          </SyntaxHighlighter>
-        </a>
-        <p>The children rendered inside the marquee.</p>
-        <table className="props-data">
-          <tr style={{fontWeight: "bold"}}>
-            <th>Type</th>
-            <th>Default</th>
-            <th>Required</th>
-          </tr>
-          <tr>
-            <td>ReactNode</td>
-            <td>null</td>
-            <td>No</td>
-          </tr>
-        </table>
+        {Object.entries(marqueeProps).map(([name, props]) => (
+          <PropDetails key={name} name={name} {...props} />
+        ))}
       </div>
     </div>
   )

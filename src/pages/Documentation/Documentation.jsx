@@ -49,7 +49,7 @@ const marqueeProps = {
   speed: {
     description: "The speed calculated as pixels/second.",
     type: "number",
-    defaultValue: "100",
+    defaultValue: "50",
     required: false
   },
   delay: {

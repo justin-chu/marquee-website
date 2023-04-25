@@ -21,7 +21,7 @@ function Home () {
           })}
         </Marquee>
         <h1 className="title">React <span style={{fontStyle: "italic"}}>FAST</span> Marquee</h1>
-        <p className="subtitle">A lightweight React component that utilizes the power of CSS animations to create silky smooth marquees.</p>
+        <p className="subtitle">A lightweight React component that harnesses the power of CSS animations to create silky smooth marquees.</p>
         <div className="button-container">
           <a className="button" href="https://github.com/justin-chu/react-fast-marquee" target="_blank" rel="noopener noreferrer">
             <img height={40} src={GitHub} alt="GitHub" />

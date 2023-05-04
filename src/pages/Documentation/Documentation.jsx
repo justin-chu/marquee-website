@@ -16,7 +16,7 @@ const marqueeProps = {
     defaultValue: '""',
     required: false
   },
-  autofill: {
+  autoFill: {
     description: "Whether to automatically fill blank space in the marquee with copies of the children or not.",
     type: "boolean",
     defaultValue: "false",

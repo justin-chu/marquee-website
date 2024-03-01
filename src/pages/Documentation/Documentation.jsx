@@ -71,14 +71,14 @@ const marqueeProps = {
     required: false
   },
   gradientColor: {
-    description: "The rgb color of the gradient as an array of length 3.",
-    type: "Array<number> of length 3",
-    defaultValue: "[255, 255, 255]",
+    description: "The color of the gradient.",
+    type: "string",
+    defaultValue: "white",
     required: false
   },
   gradientWidth: {
     description: "The width of the gradient on either side.",
-    type: "number",
+    type: "number | string",
     defaultValue: "200",
     required: false
   },
